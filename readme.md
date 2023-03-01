@@ -69,3 +69,25 @@ Affichage des interfaces webs des noeuds esclaves pour analyzer leurs comporteme
 ![image](./7.jpg)
 
 ![image](./8.jpg)
+# Application
+### Écrire un Job Map Reduce permettant, à partir du chier purchases initial, de déterminer le total des ventes par magasin
+``` 
+Création d'un module tn.insat.application dans lequel nous avons definis trois classes :
+- TokenizerMapper : le mapper de notre job qui est tres similaire a celui du job wordcount
+- MagasinReducer : Le reducer chargé du parsing des champs dans le fichier purchases.txt afin de pouvoir en tirer les valeurs des redondances de chaque magasin.
+- ProductCounter : Notre classe main
+```
+![image](./16.jpg)
+```
+Le reducer : 
+```
+![image](./18.jpg)
+```
+La configuration maven atravers laquel nous avons copier le fichier .jar vers notre contenaire master et lancer notre job evidement apres nombreux testes locaux
+```
+![image](./17.jpg)
+```
+Output : 
+```
+![image](./15.jpg)
+![image](./14.jpg)
